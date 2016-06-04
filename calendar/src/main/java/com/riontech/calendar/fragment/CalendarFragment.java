@@ -51,7 +51,7 @@ public class CalendarFragment extends Fragment {
 
 
     /**
-     * create CalendarFragment object & call setCalendar().
+     * create CalendarFragment object and call setCalendar().
      *
      * @param calendar
      * @return
@@ -72,7 +72,7 @@ public class CalendarFragment extends Fragment {
     }
 
     /**
-     * initialize Calendar & for the first time load Current Month data.
+     * initialize Calendar and for the first time load Current Month data.
      *
      * @param inflater
      * @param container
@@ -247,7 +247,7 @@ public class CalendarFragment extends Fragment {
     }
 
     /**
-     * setup next month & check for calendar range
+     * setup next month and check for calendar range
      */
 
     public void setNextMonth() {
@@ -264,7 +264,7 @@ public class CalendarFragment extends Fragment {
     }
 
     /**
-     * setup previous month & check for calendar range
+     * setup previous month and check for calendar range
      */
     public void setPreviousMonth() {
         if (month.get(GregorianCalendar.MONTH) == month
