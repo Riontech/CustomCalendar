@@ -1,5 +1,7 @@
 # Custom Android Calendar
 
+![gif](http://riontech.com/CustomCalander/calenderDemo)
+
 #Usage
 ---
 Add the dependency to your build.gradle.
@@ -45,8 +47,8 @@ And add it to customCalendar object by using addAnEvent method.
 Developed By
 ---
  * Keyur - <keyuraashra@gmail.com>
- * G+ [keyuraashra](https://plus.google.com/u/0/+KeyurAshra)
- * LinkedIn [keyuraashra](https://www.linkedin.com/in/keyurashra)
+ * G+ [Keyur Ashra](https://plus.google.com/u/0/+KeyurAshra)
+ * LinkedIn [Keyur Ashra](https://www.linkedin.com/in/keyurashra)
 
 License
 ---
