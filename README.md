@@ -1,5 +1,47 @@
 # Custom Android Calendar
 
+#Usage
+---
+Add the dependency to your build.gradle.
+```
+dependencies {
+    compile 'com.riontech:calendar:1.0'
+}
+```
+Add the indicator to your layout.
+
+```
+<com.riontech.calendar.CustomCalendar
+        android:id="@+id/customCalendar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:endMonth="07"
+        app:endYear="2016"
+        app:startMonth="01"
+        app:startYear="2016" />
+```
+
+Create object of CustomCalendar in your activity
+```
+private CustomCalendar customCalendar;
+```
+
+In your acitivty onCreate initialize the object and set eventDate with count.
+And add it to customCalendar object by using addAnEvent method.
+```
+@Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        customCalendar = (CustomCalendar) findViewById(R.id.customCalendar);
+
+        String eventDate = "2016-06-15";
+        int eventCount = 3;
+
+        customCalendar.addAnEvent(eventDate, eventCount, getEventDataList(eventCount));
+    }
+```
+            
 Developed By
 ---
  * Keyur - <keyuraashra@gmail.com>
