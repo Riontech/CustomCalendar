@@ -1,6 +1,6 @@
 # Custom Android Calendar
 
-![gif](http://riontech.com/library/calendar/calenderDemo)
+![gif](http://riontech.com/library/calendar/calendar.gif)
 
 #Usage
 ---
