@@ -4,6 +4,12 @@
 
 #Usage
 ---
+Maven repo
+```
+maven {
+    url "https://dl.bintray.com/riontech/maven"
+}
+```
 Add the dependency to your build.gradle.
 ```
 dependencies {
