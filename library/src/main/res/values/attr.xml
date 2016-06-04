@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="CustomCalendar">
+        <attr name="startMonth" format="string" />
+        <attr name="startYear" format="string" />
+        <attr name="endMonth" format="string" />
+        <attr name="endYear" format="string" />
+    </declare-styleable>
+</resources>

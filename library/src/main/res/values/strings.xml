@@ -1,3 +1,16 @@
 <resources>
-    <string name="app_name">Calendar</string>
+    <string name="app_name">Custom Calendar</string>
+
+    <!-- Calendar -->
+    <string name="sunday_text">Sun</string>
+    <string name="monday_text">Mon</string>
+    <string name="tuesday_text">Tue</string>
+    <string name="wednesday_text">Wed</string>
+    <string name="thursday_text">Thu</string>
+    <string name="friday_text">Fri</string>
+    <string name="saturday_text">Sat</string>
+    <string name="no_events">No events</string>
+
+    <string name="invalid_attribute">Failed to create Calendar,\n\n invalid value of Attributes!,\n Please review &amp; try again!</string>
+    <string name="invalid_count">Failed to create Calendar,\n\n invalid eventCount,\n Please enter between 1 to 3</string>
 </resources>

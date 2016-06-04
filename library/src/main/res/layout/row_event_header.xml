@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView
+    android:id="@+id/txtSection"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    android:text="Headedr"
+    android:background="@color/news_icon_background"
+    android:textColor="@color/colorPrimary"
+    android:paddingLeft="@dimen/common_10_dp"
+    android:paddingStart="@dimen/common_10_dp"
+    android:paddingRight="@dimen/common_10_dp"
+    android:paddingEnd="@dimen/common_10_dp"
+    android:paddingTop="@dimen/common_5_dp"
+    android:paddingBottom="@dimen/common_5_dp"
+    android:textStyle="bold"
+    android:layout_marginBottom="@dimen/common_5_dp"/>

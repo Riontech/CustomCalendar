@@ -3,4 +3,12 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+    <color name="white">#ffffff</color>
+
+    <!-- Calendar -->
+    <color name="calendar_month_text">#757575</color>
+    <color name="blue_circle_calendar">@color/colorPrimaryDark</color>
+    <color name="news_icon_background">#E3E3E3</color>
+
+
 </resources>

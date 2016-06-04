@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <!-- Common Text Size -->
+    <dimen name="h1">24sp</dimen>
+    <dimen name="h2">20sp</dimen>
+    <dimen name="h3">18sp</dimen>
+    <dimen name="h4">16sp</dimen>
+    <dimen name="h5">14sp</dimen>
+    <dimen name="h6">12sp</dimen>
+    <dimen name="h7">10sp</dimen>
+    <dimen name="h8">8sp</dimen>
+
+    <!-- Common dimen -->
+    <dimen name="common_0_dp">0dp</dimen>
+    <dimen name="common_1_dp">1dp</dimen>
+    <dimen name="common_2_dp">2dp</dimen>
+    <dimen name="common_3_dp">3dp</dimen>
+    <dimen name="common_4_dp">4dp</dimen>
+    <dimen name="common_5_dp">5dp</dimen>
+    <dimen name="common_10_dp">10dp</dimen>
+    <dimen name="common_15_dp">15dp</dimen>
+    <dimen name="common_20_dp">20dp</dimen>
+    <dimen name="common_25_dp">25dp</dimen>
+    <dimen name="common_30_dp">30dp</dimen>
+    <dimen name="common_40_dp">40dp</dimen>
+    <dimen name="common_50_dp">50dp</dimen>
+    <dimen name="common_60_dp">60dp</dimen>
+</resources>
