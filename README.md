@@ -49,7 +49,12 @@ And add it to customCalendar object by using addAnEvent method.
         customCalendar.addAnEvent(eventDate, eventCount, getEventDataList(eventCount));
     }
 ```
-            
+
+# TODOs
+* Add Event with Plus button
+* Adding Reminders for Event, Birthday, etc
+* Awesome UI-UX
+
 Developed By
 ---
  * Keyur - <keyuraashra@gmail.com>
