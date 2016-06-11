@@ -163,11 +163,6 @@ public class CustomCalendar extends LinearLayout {
         if (!isValidAttr)
             return;
 
-        if (eventCount > 3) {
-            isValidAttr = false;
-            invalidAttributes(getResources().getString(R.string.invalid_count));
-            return;
-        }
         Event date = new Event();
         date.setDate(eventDate);
         date.setCount(String.valueOf(eventCount));

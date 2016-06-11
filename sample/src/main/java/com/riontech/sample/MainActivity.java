@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
 
         String[] arr = {"2016-06-10", "2016-06-11", "2016-06-15", "2016-06-16", "2016-06-25"};
         for (int i = 0; i < 5; i++) {
-            int eventCount = 3;
+            int eventCount = 10;
             customCalendar.addAnEvent(arr[i], eventCount, getEventDataList(eventCount));
         }
     }
