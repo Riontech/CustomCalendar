@@ -2,6 +2,7 @@ package com.riontech.calendar;
 
 import android.annotation.TargetApi;
 import android.content.Context;
+import android.content.res.Configuration;
 import android.content.res.TypedArray;
 import android.os.Build;
 import android.support.v4.app.FragmentActivity;
@@ -162,11 +163,6 @@ public class CustomCalendar extends LinearLayout {
         if (!isValidAttr)
             return;
 
-        if (eventCount > 3) {
-            isValidAttr = false;
-            invalidAttributes(getResources().getString(R.string.invalid_count));
-            return;
-        }
         Event date = new Event();
         date.setDate(eventDate);
         date.setCount(String.valueOf(eventCount));
@@ -302,6 +298,17 @@ public class CustomCalendar extends LinearLayout {
         } else {
             mRvCalendar.setLayoutManager(mLinearLayoutManager);
             mRvCalendar.setAdapter(new CalendarDataAdapter(items));
+        }
+    }
+
+    @Override
+    protected void onConfigurationChanged(Configuration newConfig) {
+        super.onConfigurationChanged(newConfig);
+        // Checks the orientation of the screen for landscape and portrait
+        if (newConfig.orientation == Configuration.ORIENTATION_LANDSCAPE) {
+            Log.d(TAG, "screenOrientation: landscape");
+        } else if (newConfig.orientation == Configuration.ORIENTATION_PORTRAIT) {
+            Log.d(TAG, "screenOrientation: portrait");
         }
     }
 }
