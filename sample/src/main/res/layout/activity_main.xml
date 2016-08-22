@@ -10,7 +10,7 @@
         android:id="@+id/customCalendar"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:endMonth="07"
+        app:endMonth="12"
         app:endYear="2016"
         app:startMonth="01"
         app:startYear="2016" />

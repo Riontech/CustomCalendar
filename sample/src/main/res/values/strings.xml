@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Custom Calendar Demo</string>
+    <string name="loading_text">Loading...</string>
 </resources>

@@ -1,7 +1,7 @@
 package com.riontech.sample;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 
 import com.riontech.calendar.CustomCalendar;
 import com.riontech.calendar.dao.EventData;
@@ -13,18 +13,18 @@ import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
 
-    private CustomCalendar customCalendar;
+    private CustomCalendar mCustomCalendar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        customCalendar = (CustomCalendar) findViewById(R.id.customCalendar);
+        mCustomCalendar = (CustomCalendar) findViewById(R.id.customCalendar);
 
-        String[] arr = {"2016-06-10", "2016-06-11", "2016-06-15", "2016-06-16", "2016-06-25"};
+        String[] arr = {"2016-08-22", "2016-08-11", "2016-08-15", "2016-09-16", "2016-09-25"};
         for (int i = 0; i < 5; i++) {
             int eventCount = 10;
-            customCalendar.addAnEvent(arr[i], eventCount, getEventDataList(eventCount));
+            mCustomCalendar.addAnEvent(arr[i], eventCount, getEventDataList(eventCount));
         }
     }
 
