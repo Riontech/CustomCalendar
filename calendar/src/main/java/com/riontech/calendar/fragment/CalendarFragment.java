@@ -249,39 +249,6 @@ public class CalendarFragment extends Fragment {
                 flagMaxMin = true;
             }
         }
-
-        /*if (calendarResponse.getMonthdata() != null) {
-
-            ArrayList<Event> monthDataList = calendarResponse.getMonthdata();
-            int m = 0;
-
-            for (int n = 0; n < mMonthLength; n++) {
-                String mItemValue = mDateFormat.format(mPMonthMaxSet.getTime());
-                mPMonthMaxSet.add(GregorianCalendar.DATE, 1);
-
-                if (m < monthDataList.size()) {
-                    if (mItemValue.equalsIgnoreCase(monthDataList.get(m).getDate())) {
-                        CalendarDecoratorDao eventDao = new CalendarDecoratorDao(
-                                monthDataList.get(m).getDate(),
-                                Integer.parseInt(monthDataList.get(m).getCount()));
-                        mEventList.add(eventDao);
-                        m++;
-                    } else {
-                        CalendarDecoratorDao eventDao = new CalendarDecoratorDao(mItemValue, 0);
-                        mEventList.add(eventDao);
-                    }
-                } else {
-                    CalendarDecoratorDao eventDao = new CalendarDecoratorDao(mItemValue, 0);
-                    mEventList.add(eventDao);
-                }
-            }
-
-            mCalendarGridviewAdapter.notifyDataSetChanged();
-
-            if (!flagMaxMin) {
-                flagMaxMin = true;
-            }
-        }*/
     }
 
     /**
