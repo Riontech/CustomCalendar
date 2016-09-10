@@ -24,7 +24,6 @@ import com.riontech.calendar.dao.Event;
 import com.riontech.calendar.dao.EventData;
 import com.riontech.calendar.fragment.CalendarFragment;
 import com.riontech.calendar.utils.CalendarUtils;
-import com.riontech.calendar.R;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -52,6 +51,7 @@ public class CustomCalendar extends LinearLayout {
     private ImageView mImgFailed;
     private ArrayList<Event> mEventList;
     private boolean isValidAttr = true;
+    private Calendar mCalendar;
 
     private Context mContext;
     private AttributeSet mAttributeSet = null;
@@ -310,5 +310,12 @@ public class CustomCalendar extends LinearLayout {
         } else if (newConfig.orientation == Configuration.ORIENTATION_PORTRAIT) {
             Log.d(TAG, "screenOrientation: portrait");
         }
+    }
+
+    public void refreshCalendar(){
+        mCalendar = Calendar.getInstance();
+        ((CalendarFragment) mAdapter.getRegisteredFragment(mViewPager.getCurrentItem())).refreshCalendar();
+        ((CalendarFragment) mAdapter.getRegisteredFragment(mViewPager.getCurrentItem()))
+                .fetchEvents(CalendarUtils.getCalendarDBFormat().format(mCalendar.getTime()));
     }
 }

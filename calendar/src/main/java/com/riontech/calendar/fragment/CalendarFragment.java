@@ -13,6 +13,7 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.riontech.calendar.CustomCalendar;
+import com.riontech.calendar.R;
 import com.riontech.calendar.Singleton;
 import com.riontech.calendar.adapter.CalendarGridviewAdapter;
 import com.riontech.calendar.dao.CalendarDecoratorDao;
@@ -20,7 +21,7 @@ import com.riontech.calendar.dao.CalendarResponse;
 import com.riontech.calendar.dao.Event;
 import com.riontech.calendar.dao.EventData;
 import com.riontech.calendar.utils.CalendarUtils;
-import com.riontech.calendar.R;
+import com.riontech.calendar.utils.EventUtils;
 
 import java.text.DateFormat;
 import java.util.ArrayList;
@@ -212,32 +213,36 @@ public class CalendarFragment extends Fragment {
         mRlHeader.setVisibility(View.VISIBLE);
         mGridview.setVisibility(View.VISIBLE);
 
+        if (EventUtils.getEventMap() == null || EventUtils.getEventMap().size() == 0)
+            EventUtils.generateMonthsEvents(calendarResponse.getMonthdata(), month.get(Calendar.YEAR));
+
         if (calendarResponse.getMonthdata() != null) {
-
-            ArrayList<Event> monthDataList = calendarResponse.getMonthdata();
-            int m = 0;
-
+            ArrayList<Event> monthDataList;
+            if (EventUtils.getMonthEvent(EventUtils.getMonthYearString(month.getTime())) == null) {
+                monthDataList = calendarResponse.getMonthdata();
+            } else {
+                monthDataList = EventUtils.getMonthEvent(EventUtils.getMonthYearString(month.getTime()));
+            }
+            // n = 0; n < 35; n++
             for (int n = 0; n < mMonthLength; n++) {
                 String mItemValue = mDateFormat.format(mPMonthMaxSet.getTime());
                 mPMonthMaxSet.add(GregorianCalendar.DATE, 1);
-
-                if (m < monthDataList.size()) {
-                    if (mItemValue.equalsIgnoreCase(monthDataList.get(m).getDate())) {
+                boolean isAdded = false;
+                for (Event event : monthDataList) {
+                    if (mItemValue.equalsIgnoreCase(event.getDate())) {
                         CalendarDecoratorDao eventDao = new CalendarDecoratorDao(
-                                monthDataList.get(m).getDate(),
-                                Integer.parseInt(monthDataList.get(m).getCount()));
+                                event.getDate(),
+                                Integer.parseInt(event.getCount()));
                         mEventList.add(eventDao);
-                        m++;
-                    } else {
-                        CalendarDecoratorDao eventDao = new CalendarDecoratorDao(mItemValue, 0);
-                        mEventList.add(eventDao);
+                        isAdded = true;
                     }
-                } else {
+                }
+
+                if (!isAdded) {
                     CalendarDecoratorDao eventDao = new CalendarDecoratorDao(mItemValue, 0);
                     mEventList.add(eventDao);
                 }
             }
-
             mCalendarGridviewAdapter.notifyDataSetChanged();
 
             if (!flagMaxMin) {
